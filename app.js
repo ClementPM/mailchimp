@@ -59,7 +59,7 @@ console.log(`Successfully added contact as an audience member. The contact's id 
 run().catch(e => res.sendFile(__dirname + "/failure.html"));
 });
 
-// PLACED OUTSIDE OF THE POST, redirect to the home route when clicking the try again btn
+// PLACED OUTSIDE OF THE POST, on failure.html redirect to the home route when clicking the try again btn
 app.post("/failure", function(req, res) {
   res.redirect("/");
 });
