@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 // Listening on port 3000 and if it goes well then logging a message saying that the server is running
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
 console.log("Server is running at port 3000");
 });
 
