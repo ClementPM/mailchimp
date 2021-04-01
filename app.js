@@ -21,7 +21,7 @@ res.sendFile(__dirname + "/signup.html");
 
 // Setting up MailChimp
 mailchimp.setConfig({
-apiKey: "a596ee89b2f2a9585a0fbf0fa7837dce8-us1",
+apiKey: "596ee89b2f2a9585a0fbf0fa7837dce8-us1",
 server: "us1"
 });
 
