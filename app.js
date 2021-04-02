@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -21,9 +23,9 @@ res.sendFile(__dirname + "/signup.html");
 
 // Setting up MailChimp
 mailchimp.setConfig({
-apiKey: "596ee89b2f2a9585a0fbf0fa7837dce8-us1",
+apiKey: process.env.MAILCHIMP_API_KEY,
 server: "us1"
-});
+}); 
 
 // As soon as the sign in button is pressed execute the following
 app.post("/", function (req,res) {
